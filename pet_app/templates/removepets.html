@@ -1,0 +1,42 @@
+<html>
+    <head>
+        {%load static%}
+        <link href="{%static 'css/remove.css' %}" rel="stylesheet">
+        <div class="nav">
+            {% include "petseller-header.html" %}
+        </div>
+    </head>
+    <body>
+            <form>
+                {% csrf_token %}
+                <table border="0">
+                    <tr>
+                        <th>Pet Id</th>
+                        <th>Pet name</th>
+                        <th>User Id</th>
+                        <th>Category Id</th>
+                        <th>Photo</th>
+                        <th>Discription</th>
+                        <th>Price</th>
+                        <th>Status</th>
+                    </tr>
+
+                {% for d in rm%}
+                <tr>
+                    <td>{{ d.pet_id}}</td>
+                    <td>{{ d.pet_name }}</td>
+                    <td>{{ d.user_id }}</td>
+                    <td>{{ d.category_id }}</td>
+                    <td><img src="{{ d.photo }}" width="50" height="50"></td>
+                    <td>{{ d.discription }}</td>
+                    <td>{{ d.price }}</td>
+                    <td>{{ d.status }}</td>
+                    <td><a href="/removepets1/{{d.id}}">Remove</a></td>
+
+                </tr>
+                {% endfor %}
+                </table>
+            </form>
+        </div>
+    </body>
+</html>

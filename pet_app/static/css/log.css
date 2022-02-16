@@ -1,0 +1,84 @@
+.d{
+    width: 25%;
+    height: 50%;
+    margin-top: 7%;
+    margin-left: 37%;
+    background-color: rgba(1, 20, 27, 0.5);
+    border-radius: 20px;
+    padding: 12px;
+    color: blanchedalmond;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('../image/b1.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+input[type=text]{
+    padding: 12px 16px;   
+    margin-top: 5%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(236, 236, 236);
+    color: white;
+
+}
+input[type=password]{
+    padding: 12px;
+    margin-top: 5%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(236, 236, 236);
+    color: white;
+}
+input[type=file]{
+    border: none;
+    width: 50%;
+    padding: 14px 16px;
+}
+input[type=submit]{
+    padding: 12px;
+    border-radius: 10px;
+    margin-top: 10%;
+    width: 50%;
+    margin-left: 25%;
+    background-color: rgb(2, 35, 51);
+    cursor: pointer;
+    color: burlywood;
+}
+input[type=submit]:hover{
+    background-color: brown
+}
+table{
+    margin-left: 27%;
+    margin-top: 7%;
+    width: 50%;
+    color: blanchedalmond;
+    border: white;
+}
+h1{
+    font-family : 'Times New Roman';
+}
+.t{
+    
+    font-family: 'Times New Roman';
+    margin-top: 5%;
+}
+.nav{
+    overflow: hidden;
+    background: transparent;
+}
+
+.nav a {
+    float: right;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+h2{
+    font-family: 'Times New Roman';
+}

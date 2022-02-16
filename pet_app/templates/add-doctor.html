@@ -1,0 +1,58 @@
+<html>
+    <head>
+        {%load static%}
+        <link rel="stylesheet" href="{% static 'css/doctor.css' %}">
+        <div class="nav">
+            {%  include "admin-header.html" %}
+        </div>
+    </head>
+    <body>
+        <div class="d">
+            <form method="post" enctype="multipart/form-data" action="/adddoctor1/">
+                {% csrf_token%}
+                <h2 align="center"><b><i>Doctor Details</i></b></h1>
+                <table>
+                    <tr>
+                        <td>Doctor Name</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="name" placeholder="Enter Doctor name...."></td>
+                    </tr>
+                    <tr>
+                        <td>Qualification</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="qualification" placeholder="Enter Qualification...."></td>
+                    </tr>
+                    <tr>
+                        <td>Speciality</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="speciality" placeholder="Enter Speciality...."></td>
+                    </tr>
+                    <tr>
+                        <td>Address</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="address" placeholder="Enter Address...."></td>
+                    </tr>
+                    <tr>
+                        <td>Phone</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="phone" placeholder="Enter Phone.no...."></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="email" placeholder="Enter Email...."></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="submit" value="Add"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>

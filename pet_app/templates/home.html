@@ -1,0 +1,51 @@
+<html>
+    <head>
+        {%load static%}
+        <link href="{%static 'css/home1.css'%}" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <div class="nav">
+            {% include "public-header.html" %}
+        </div>
+    </head>
+    <body class="a">
+        <form>
+            {% csrf_token %}
+            
+            <div class="b">
+                <table class="c">
+                    <tr>
+                        <td><img src="{% static 'image/pet1.jpg'%}" width="700" height="367"></td>
+                        <td class="td">
+                            <p>A <b><i>PetCenter</i></b> is a retail business which sells different kinds of animals to the public. 
+                            A variety of animal supplies and pet accessories are also sold in this website. 
+                            The products sold include: food, treats, toys, collars, leashes, cat litter, cages , aquariums and vaccine .
+                             
+                            </p></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="d">
+                <table class="e">
+                    <tr>
+                        <th align="center" colspan="3"><h1><b><i>Gallery</i></b></h1></th>
+                    </tr>
+                    <tr>
+                        <td><img src="{%static 'image/m1.jpg'%}" width="500" height="250"></td>
+                        <td><img src="{%static 'image/cn.jpg'%}" width="500" height="250"></td>
+                        <td><img src="{%static 'image/cc.jpg'%}" width="500" height="250"></td>
+                    </tr>
+                    <tr>
+                        <td><img src="{%static 'image/ct.jpg'%}" width="500" height="250"></td>
+                        <td><img src="{%static 'image/ca.jpg'%}" width="500" height="250"></td>
+                        <td><img src="{%static 'image/cb.jpg'%}" width="500" height="250"></td>
+                    </tr>
+                    <tr>
+                        <td><img src="{%static 'image/d1.jpeg'%}" width="500" height="250"></td>
+                        <td><img src="{%static 'image/d.jpg'%}" width="500" height="250"></td>
+                        <td><img src="{%static 'image/dd.jpg'%}" width="500" height="250"></td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </body>
+</html>

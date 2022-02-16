@@ -1,0 +1,40 @@
+<html>
+    <head>
+        {%load static%}
+        <link rel="stylesheet" href="{% static 'css/allheader.css' %}">
+        <div class="nav">
+            {% include "admin-header.html" %}
+        </div>
+    </head>
+    <body>
+        <div class="d">
+            <form method="post" enctype="multipart/form-data" action="/addcategory1/">
+                {% csrf_token%}
+                <h2 align="center"><b><i>Add Category</i></b></h1>
+                <table>
+                    <tr>
+                        <td>Category Name</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="ctgryname" placeholder="Enter Category name...."></td>
+                    </tr>
+                    <tr>
+                        <td>Discription</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="discription" placeholder="Enter Discription...."></td>
+                    </tr>
+                    <tr>
+                        <td>Photo</td>
+                    </tr>
+                    <tr>
+                        <td><input type="file" name="photo"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="submit" value="Add"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>

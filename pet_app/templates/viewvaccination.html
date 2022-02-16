@@ -1,0 +1,33 @@
+<html>
+    <head>
+        {%load static%}
+        <link href="{%static 'css/remove.css' %}" rel="stylesheet">
+        <div class="nav">
+            {% include "petseller-header.html" %}
+        </div>
+    </head>
+    <body>
+            <form>
+                {% csrf_token %}
+                
+                <table border="0">
+                    <tr>
+                        <th>Vaccination id</th>
+                        <th>Category id</th>
+                        <th>Vaccination</th>
+                        <th>Details</th>
+                    </tr>
+
+                {% for a in vv%}
+                <tr>
+                    <td>{{ a.vaccination_id }}</td>
+                    <td>{{ a.category_id }}</td>
+                    <td>{{ a.vaccination}}</td>
+                    <td>{{ a.details }}</td>
+                </tr>
+                {% endfor %}
+                </table>
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+    <head>
+        {%load static%}
+        <link href="{%static 'css/remove.css' %}" rel="stylesheet">
+        <div class="nav">
+            {% include "doctor-header.html" %}
+        </div>
+    </head>
+    <body>
+            <form>
+                {% csrf_token %}
+                <table border="0">
+                    <tr>
+                        <th>Query Id</th>
+                        <th>User Id</th>
+                        <th>Query</th>
+                        <th>Replay</th>
+                        <th>Status</th>
+                    </tr>
+
+                {% for v in itm%}
+                <tr>
+                    <td>{{ v.query_id }}</td>
+                    <td>{{ v.user_id }}</td>
+                    <td>{{ v.query }}</td>
+                    <td>{{ v.replay }}</td>
+                    <td>{{ v.status }}</td>
+                    <td><a href="/answerquery1/{{v.id}}">Answer Query</a></td>
+                </tr>
+                {% endfor %}
+                </table>
+            </form>
+        </div>
+    </body>
+</html>

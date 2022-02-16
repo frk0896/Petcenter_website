@@ -1,0 +1,43 @@
+<html>
+    <head>
+        {%load static%}
+        <link href="{%static 'css/remove.css' %}" rel="stylesheet">
+        <div class="nav">
+            {% include "public-header.html" %}
+        </div>
+    </head>
+    <body>
+            <form>
+                {% csrf_token %}
+               
+                <table border="0">
+                    <tr>
+                        <th>Pet Id</th>
+                        <th>Pet Name</th>
+                        <th>User Id</th>
+                        <th>Category Id</th>
+                        <th>Photo</th>
+                        <th>Discription</th>
+                        <th>Price</th>
+                    </tr>
+
+                {% for v in dt%}
+                <tr>
+                    <td>{{ v.pet_id }}</td>
+                    <td>{{ v.pet_name }}</td>
+                    <td>{{ v.user_id }}</td>
+                    <td>{{ v.category_id }}</td>
+                    <td><img src="{{v.photo }}" width="100" height="100" > </td>
+                    <td>{{ v.discription }}</td>
+                    <td>{{ v.price }}</td>
+                    <td><a href="/viewreviewpbc/{{v.pet_id}}">View Review</a></td>
+                    <td><a href="/viewcomplaintpbc/{{v.pet_id}}">View Complaint</a></td>
+                    <td><a href="/orderpbc/{{v.pet_id}}">Order</a></td>
+
+                </tr>
+                {% endfor %}
+                </table>
+            </form>
+        </div>
+    </body>
+</html>

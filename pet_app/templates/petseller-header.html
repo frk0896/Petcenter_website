@@ -1,0 +1,30 @@
+<html>
+    <head>
+        {%load static%}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <link href="{% static 'css/seller.css'%}" rel="stylesheet">
+    </head>
+    <body>
+        <div class="nav">
+            <h1>PetCenter</h1>
+            <a href="/login" class="bi bi-power">Logout</a>
+            <a href="/addquery">Query</a>
+            <a href="/viewvaccination">View Vaccination</a>
+            <a href="/viewfeed">View Feed</a>
+            <a href="/orderprocess">Order Processing</a>
+            <a href="/vieworder">View Order</a>
+
+            <div class="dropdown">
+                <button class="dropbtn">Pets
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="/addpets">Add</a>
+                    <a href="/removepets">Remove</a>
+                </div>
+            </div>
+            <a href="/home" class="bi bi-house-fill">Home</a>
+        </div>
+       
+    </body>
+</html>

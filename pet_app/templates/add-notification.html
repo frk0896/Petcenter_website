@@ -1,0 +1,27 @@
+<html>
+    <head>
+        {%load static%}
+        <link rel="stylesheet" href="{% static 'css/not.css' %}">
+        <div class="nav">
+            {% include "admin-header.html" %}
+        </div>
+    </head>
+    <body>
+        <div class="d">
+            <form method="post" enctype="multipart/form-data" action="/addnotification1/">
+                {% csrf_token%}
+                <h2 align="center"><b><i>Notification</i></b></h1>
+                <table>
+                    <tr>
+                        <td>Notification</td>
+                    </tr>
+                    <tr>
+                        <td><textarea name="notification" placeholder="Enter the Notification...."></textarea></td>
+                    </tr>
+                        <td colspan="2"><input type="submit" value="Add"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>

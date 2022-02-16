@@ -1,0 +1,37 @@
+<html>
+    <head>
+        {%load static%}
+        <link href="{%static 'css/remove.css' %}" rel="stylesheet">
+        <div class="nav">
+            {% include "buyer-header.html" %}
+        </div>
+    </head>
+    <body>
+            <form>
+                {% csrf_token %}
+                <table border="0">
+                    <tr>
+                        <th>Query Id</th>
+                        <th>Pet Id</th>
+                        <th>User Id</th>
+                        <th>Order Date</th>
+                        <th>Remark</th>
+                        <th>Status</th>
+                    </tr>
+
+                {% for v in dta%}
+                <tr>
+                    <td>{{ v.order_id }}</td>
+                    <td>{{ v.pet_id }}</td>
+                    <td>{{ v.user_id }}</td>
+                    <td>{{ v.order_date }}</td>
+                    <td>{{ v.remark }}</td>
+                    <td>{{ v.status }}</td>
+                    
+                </tr>
+                {% endfor %}
+                </table>
+            </form>
+        </div>
+    </body>
+</html>

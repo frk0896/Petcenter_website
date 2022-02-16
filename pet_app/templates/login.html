@@ -1,0 +1,34 @@
+<html>
+    <head>
+        {%load static%}
+        <link href="{%static 'css/logg.css'%}" rel="stylesheet">
+        <div class="nav">
+            {% include "public-header.html" %}
+        </div>
+    </head>
+    <body class="a">
+        <div class="d">
+            <form method="post" action="/login1/">
+                {% csrf_token %}
+                <h2 align="center"><b><i>Login</i></b></h1>
+                <table>
+                    <tr>
+                        <td class="t">Username</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="username" placeholder="Enter username...."></td>
+                    </tr>
+                    <tr>
+                        <td class="t">Password</td>
+                    </tr>
+                    <tr>
+                        <td><input type="password" name="password" placeholder="Enter password....."></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="submit" value="login"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>

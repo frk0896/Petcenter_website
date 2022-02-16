@@ -1,0 +1,28 @@
+<html>
+    <head>
+        {%load static%}
+        <link rel="stylesheet" href="{% static 'css/query.css' %}">
+        <div class="nav">
+            {% include "doctor-header.html" %}
+        </div>
+    </head>
+    <body>
+        <div class="d">
+            <form method="post"action="/answerquery2/{{items.id}}">
+                {% csrf_token%}
+                <h2 align="center"><b><i>Answer the Query</i></b></h1>
+                <table>
+                    <tr>
+                        <td>Replay</td>
+                    </tr>
+                    <tr>
+                        <td><textarea name="replay" value="{{items.replay}}"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="submit" value="Add"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>

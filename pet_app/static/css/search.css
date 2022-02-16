@@ -1,0 +1,45 @@
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('../image/d1.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.d{
+  width: 30%;
+  height: 25%;
+  margin-left: 37%;
+  background-color: rgba(1, 20, 27, 0.5);
+  border-radius: 10px;
+  padding: 12px;
+  color: rgb(255, 255, 255);
+}
+  
+.nav {
+    overflow: hidden;
+    background: transparent;
+}
+  
+.nav a {
+    float: right;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+h2{
+    font-family: 'Times New Roman';
+}
+h1{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    float: left;
+    color: rgb(80, 110, 114);
+    font-weight: bold;
+    font-style: italic;
+    font-size: 25px;
+    font-variant: small-caps;
+    margin-left: 2%;
+    width: 10%;
+}

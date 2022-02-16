@@ -1,0 +1,33 @@
+<html>
+    <head>
+        {%load static%}
+        <link href="{%static 'css/remove.css' %}" rel="stylesheet">
+        <div class="nav" >
+            {% include "admin-header.html" %}
+        </div>
+    </head>
+    <body>
+            <form>
+                {% csrf_token %}
+                <table border="0">
+                    <tr>
+                        <th>Notification id</th>
+                        <th>Notification</th>
+                        <th>Date</th>
+        
+                    </tr>
+
+                {% for n in rm%}
+                <tr>
+                    <td>{{ n.notification_id }}</td>
+                    <td>{{ n.notification }}</td>
+                    <td>{{ n.date }}</td>
+                    <td><a href="/removenotification1/{{n.id}}">Remove</a></td>
+
+                </tr>
+                {% endfor %}
+                </table>
+            </form>
+        </div>
+    </body>
+</html>

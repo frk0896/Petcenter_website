@@ -1,0 +1,26 @@
+<html>
+    <head>
+        {%load static%}
+        <link href="{%static 'css/search.css' %}" rel="stylesheet">
+        <div class="nav">
+            {% include "buyer-header.html" %}
+        </div>
+        
+    </head>
+    <body>
+            <form>
+                {% csrf_token %}
+                
+                {% for v in itm %}
+                <div class="d">
+                    <img src="{{v.photo }}" width="150" height="100" > </br>
+                    Pet Name   : {{ v.pet_name }}<br> 
+                    Price      : {{ v.price }}<br>
+                    Discription : {{ v.discription }}<br>
+                </div>
+                <br>
+                {% endfor %}
+               
+            </form>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<html>
+    <head>
+        {%load static%}
+        <link rel="stylesheet" href="{% static 'css/vaccin.css' %}">
+        <div class="nav">
+            {% include "admin-header.html" %}
+        </div>
+    </head>
+    <body>
+        <div class="d">
+            <form method="post" enctype="multipart/form-data" action="/vaccination/">
+                {% csrf_token%}
+                <h2 align="center"><b><i>Vaccination</i></b></h1>
+                <table>
+                    <tr>
+                        <td>Category Id</td>
+                    </tr>
+                    <tr>
+                        <td><select name="ctgryid"><option>Please choose your category</option>
+                        {% for ct in data %}
+                        <option value="{{ct.category_id}}">{{ct.category_name}}</option>
+                        {%endfor%}
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td>Vaccination</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="vaccination"></td>
+                    </tr>
+                    <tr>
+                        <td>Details</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="details"></td>
+                    </tr>
+                   
+                    <tr>
+                        <td colspan="2"><input type="submit" value="Submit"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>

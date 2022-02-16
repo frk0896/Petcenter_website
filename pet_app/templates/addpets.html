@@ -1,0 +1,62 @@
+<html>
+    <head>
+        {%load static%}
+        <link rel="stylesheet" href="{% static 'css/pett.css' %}">
+        <div class="nav">
+            {% include "petseller-header.html"  %}
+        </div>
+    </head>
+    <body>
+        <div class="d">
+            <form method="post" enctype="multipart/form-data" action="/addpets1/">
+                {% csrf_token%}
+                <h2 align="center"><b><i>Add Pets</i></b></h1>
+                <table>
+                    <tr>
+                        <td>Pet Name</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="petname" placeholder="Enter pet name...."></td>
+                    </tr>
+                    <tr>
+                        <td>User Id</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="userid" value="{{uid}}"></td>
+                    </tr>
+                    <tr>
+                        <td>Category Id</td>
+                    </tr>
+                    <tr>
+                        <td><select class="dropdown" name="catgryid"><option>please choose category id</option>
+                            {% for c in ct %}
+                            <option value="{{c.category_id}}">{{c.category_name}}</option>
+                            {%endfor%}
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td>Photo</td>
+                    </tr>
+                    <tr>
+                        <td><input type="file" name="photo" ></td>
+                    </tr>
+                    <tr>
+                        <td>Discription</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="discription" placeholder="Enter Discription...."></td>
+                    </tr>
+                    <tr>
+                        <td>Price</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="price" placeholder="Enter Price...."></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="submit" value="Add"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>

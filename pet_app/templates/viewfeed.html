@@ -1,0 +1,31 @@
+<html>
+    <head>
+        {%load static%}
+        <link href="{%static 'css/remove.css' %}" rel="stylesheet">\
+        <div class="nav">
+            {% include "petseller-header.html" %}
+        </div>
+    </head>
+    <body>
+            <form>
+                {% csrf_token %}
+
+                <table border="0">
+                    <tr>
+                        <th>category id</th>
+                        <th>Feed</th>
+                        <th>Discription</th>
+                    </tr>
+
+                {% for v in vw%}
+                <tr>
+                    <td>{{ v.category_id }}</td>
+                    <td>{{ v.feed }}</td>
+                    <td>{{ v.discription }}</td>
+                </tr>
+                {% endfor %}
+                </table>
+            </form>
+        </div>
+    </body>
+</html>

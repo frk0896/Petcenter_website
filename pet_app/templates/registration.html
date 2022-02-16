@@ -1,0 +1,56 @@
+<html>
+    <head>
+        {%load static%}
+        <link rel="stylesheet" href="{% static 'css/reg.css' %}">
+        <div class="nav">
+            {% include "public-header.html" %}
+        </div>
+    </head>
+    <body>
+        <div class="d">
+            <form method="post" action="/registration1/">
+                {% csrf_token%}
+                <h2 align="center"><b><i>Registration</i></b></h1>
+                <table>
+                    <tr>
+                        <td>Category</td>
+                    </tr>
+                    <tr>
+                        <td><select class="dropdown" name="category" aria-placeholder="cate">
+                            <option></option>
+                            <option>Buyer</option>
+                            <option>Seller</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="name" placeholder="Enter Name...."></td>
+                    </tr>
+                    <tr>
+                        <td>Addres</td>
+                    </tr>
+                    <tr>
+                        <td><textarea name="address" placeholder="Enter Address...."></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>Phone</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="phone" placeholder="Enter Phone.no...."></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                    </tr>
+                    <tr>
+                        <td><input type="email" name="email" placeholder="Enter Email...."></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="submit" value="Register"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>

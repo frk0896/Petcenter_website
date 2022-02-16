@@ -1,0 +1,34 @@
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('../image/d1.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.d{
+  width: 30%;
+  height: 30%;
+  margin-left: 37%;
+  background-color: rgb(47, 92, 95);
+  border-radius: 10px;
+  padding: 12px;
+  color: rgb(255, 255, 255);
+}
+
+.navbar {
+    overflow: hidden;
+    background: transparent;
+  }
+
+  h1{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    float: left;
+    color: rgb(80, 110, 114);
+    font-weight: bold;
+    font-style: italic;
+    font-size: 25px;
+    font-variant: small-caps;
+    margin-left: 2%;
+    width: 10%;
+  }

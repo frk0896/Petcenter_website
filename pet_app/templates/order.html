@@ -1,0 +1,40 @@
+<html>
+    <head>
+        {%load static%}
+        <link rel="stylesheet" href="{% static 'css/order.css' %}">
+        <div class="nav">
+            {% include "buyer-header.html" %}
+        </div>
+    </head>
+    <body>
+        <div class="d">
+            <form method="post"  action="/order1/">
+                {% csrf_token%}
+                <h2 align="center"><b><i>Order</b></h2>
+                <table>
+                    <tr>
+                        <td>Pet Id</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="petid" value="{{pi}}"></td>
+                    </tr>
+                    <tr>
+                        <td>User Id</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="userid"  value="{{uid}}"></td>
+                    </tr>
+                    <tr>
+                        <td>Remark</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="remark" placeholder="Enter Remark...."></td>
+                    </tr>
+                    
+                        <td colspan="2"><input type="submit" value="Order"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>

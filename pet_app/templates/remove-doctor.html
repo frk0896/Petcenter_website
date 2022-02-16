@@ -1,0 +1,42 @@
+<html>
+    <head>
+        {%load static%}
+        <link href="{%static 'css/remove.css' %}" rel="stylesheet">
+        <div class="nav">
+            {% include "admin-header.html" %}
+        </div>
+    </head>
+    <body>
+            <form>
+                {% csrf_token %}
+                <table border="0">
+                    <tr>
+                        <th>Doctor Id</th>
+                        <th>Doctor name</th>
+                        <th>Qualification</th>
+                        <th>Speciality</th>
+                        <th>Address</th>
+                        <th>Phone</th>
+                        <th>email</th>
+                        <th>Status</th>
+                    </tr>
+
+                {% for d in dt%}
+                <tr>
+                    <td>{{ d.doctor_id }}</td>
+                    <td>{{ d.name }}</td>
+                    <td>{{ d.qualification }}</td>
+                    <td>{{ d.speciality }}</td>
+                    <td>{{ d.address }}</td>
+                    <td>{{ d.phone }}</td>
+                    <td>{{ d.email }}</td>
+                    <td>{{ d.status }}</td>
+                    <td><a href="/remove1/{{d.id}}">Remove</a></td>
+
+                </tr>
+                {% endfor %}
+                </table>
+            </form>
+        </div>
+    </body>
+</html>
